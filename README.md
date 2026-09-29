@@ -15,8 +15,8 @@ Neste trabalho, será desenvolvido um sistema de cálculo de troco, utilizando e
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: JavaScript
-**Framework**: React + Vite
+**Linguagem**: JavaScript <br>
+**Framework**: React + Vite <br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
