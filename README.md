@@ -1,4 +1,4 @@
-# Greedy
+# Calculadora de troco
 Número da Lista: 45
 Conteúdo da Disciplina: Algoritmos ambiciosos
 
@@ -9,14 +9,14 @@ Conteúdo da Disciplina: Algoritmos ambiciosos
 | 241031852  | Matheus Lemes Amaral |
 
 ## Sobre
-Trabalho 2 da disicplina de Projeto de Algoritmo 2026.2. Neste trabalho o tema a ser desenvolvido será de algoritmos ambiciosos.
+Neste trabalho, será desenvolvido um sistema de cálculo de troco, utilizando e analisando o algoritmo ambicioso do trocador para encontrar uma combinação de moedas e cédulas que represente o valor do troco.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+**Linguagem**: JavaScript
+**Framework**: React + Vite
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ## Uso 
