@@ -14,3 +14,23 @@ export interface CurrencySystem {
   symbol: string
   denominations: Denomination[]
 }
+
+export interface ChangeItem {
+  denomination: Denomination
+  count: number
+}
+
+// Uma iteração do algoritmo: a maior peça que cabe no restante e quantas vezes ela é usada.
+export interface GreedyStep {
+  remaining: number
+  denomination: Denomination
+  count: number
+  newRemaining: number
+}
+
+export interface GreedyResult {
+  items: ChangeItem[]
+  steps: GreedyStep[]
+  totalPieces: number
+  remaining: number
+}
