@@ -21,7 +21,11 @@ export function greedyChange(amount: number, denominations: Denomination[]): Gre
     remaining = newRemaining
   }
 
+  if (remaining !== 0) {
+    return { solved: false, steps, remaining }
+  }
+
   const totalPieces = items.reduce((total, item) => total + item.count, 0)
 
-  return { items, steps, totalPieces, remaining }
+  return { solved: true, items, steps, totalPieces }
 }
