@@ -28,9 +28,17 @@ export interface GreedyStep {
   newRemaining: number
 }
 
-export interface GreedyResult {
-  items: ChangeItem[]
-  steps: GreedyStep[]
-  totalPieces: number
-  remaining: number
-}
+// Sem solução: nenhuma peça cabe no restante e ele ainda não é zero
+// ("no solution found" do pseudocódigo). Os passos mostram até onde o algoritmo chegou.
+export type GreedyResult =
+  | {
+      solved: true
+      items: ChangeItem[]
+      steps: GreedyStep[]
+      totalPieces: number
+    }
+  | {
+      solved: false
+      steps: GreedyStep[]
+      remaining: number
+    }
