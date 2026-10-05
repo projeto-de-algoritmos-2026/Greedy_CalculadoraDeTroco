@@ -11,3 +11,46 @@
 body {
   margin: 0;
 }
+
+.change-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.money-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.money-input label {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.money-input__field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.money-input__field:focus-within {
+  border-color: var(--accent);
+}
+
+.money-input input {
+  width: 10ch;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-h);
+  font: inherit;
+  font-family: var(--mono);
+}
