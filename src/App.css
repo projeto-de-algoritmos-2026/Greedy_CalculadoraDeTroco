@@ -1,56 +1,134 @@
 :root {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.5;
-  color-scheme: light dark;
-}
-
-* {
-  box-sizing: border-box;
+  --ink: #14213d;
+  --muted: #5b6478;
+  --bg: #e8eef0;
+  --card: #fff;
+  --line: #c5cfd6;
+  --accent: #0b7a5b;
+  --warn: #b3261e;
 }
 
 body {
-  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
 }
 
-.change-form {
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+  display: grid;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+}
+
+.panel,
+.tape {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.panel {
+  display: grid;
+  gap: 12px;
+}
+
+.tape {
+  border: 2px dashed var(--line);
+  font-variant-numeric: tabular-nums;
+  overflow-x: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.pieces {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  padding: 0 16px;
-}
-
-.money-input {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-align: left;
-}
-
-.money-input label {
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-.money-input__field {
-  display: flex;
-  align-items: center;
   gap: 8px;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
 }
 
-.money-input__field:focus-within {
-  border-color: var(--accent);
+.pieces li {
+  background: #e3f3ee;
+  border-radius: 999px;
+  padding: 4px 12px;
 }
 
-.money-input input {
-  width: 10ch;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: var(--text-h);
-  font: inherit;
-  font-family: var(--mono);
+.total {
+  margin: 0;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.warn {
+  margin: 0;
+  color: var(--warn);
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: right;
+  padding: 6px 8px;
+  border-bottom: 1px dashed var(--line);
+}
+
+th {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
 }
