@@ -1,4 +1,7 @@
 # Calculadora de troco
+
+Vídeo de apresentação: [assistir no YouTube](https://youtu.be/EJ_GM8pyCDo)
+
 Número da Lista: 45
 Conteúdo da Disciplina: Algoritmos ambiciosos
 
@@ -66,7 +69,7 @@ Mensagens que podem aparecer:
 
 ## Outros 
 - Todos os valores são tratados internamente em **centavos inteiros** (R$ 2,89 = 289), evitando erros de ponto flutuante como `0.1 + 0.2`.
-- Complexidade: o algoritmo percorre cada denominação uma vez, portanto é O(n), com n igual ao número de denominações.
+- Complexidade de tempo: O(n log n), dominada pela ordenação das n denominações. A varredura e a soma final percorrem a lista em O(n).
 - Outros comandos:
 
       npm test        # executa os testes (Vitest)
